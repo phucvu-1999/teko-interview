@@ -1,0 +1,53 @@
+.app {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.to-do {
+  &-app {
+    width: 400px;
+    border: 1px solid #ccc;
+    height: auto;
+    padding: 12px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-text {
+    font-weight: bold;
+    margin-left: 4px;
+  }
+}
+
+.mt-5 {
+  margin-top: 5;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.mb-5 {
+  margin-bottom: 5px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.ml-5 {
+  margin-left: 5px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.mt-5 {
+  margin-right: 5px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
