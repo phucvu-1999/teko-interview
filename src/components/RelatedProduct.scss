@@ -1,0 +1,63 @@
+.related-product {
+  &-container {
+    padding: 8px;
+    width: 120px;
+    flex: 1;
+    width: 120px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    &:first-child {
+      margin-right: 8px;
+    }
+
+    button {
+      border: 2px solid red;
+      border-radius: 4px;
+      color: red;
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      font-weight: 600;
+      background-color: #fff;
+    }
+  }
+
+  &-img {
+    height: 150px;
+    img {
+      height: 150px;
+    }
+  }
+
+  &-name {
+    color: #8a8c96;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  &-stocks {
+    font-size: 14px;
+    color: #f4d4ad;
+  }
+
+  &-normal-price {
+    font-size: 20px;
+    color: red;
+    font-weight: 600;
+    text-decoration: line-through;
+  }
+
+  &-discount {
+    display: flex;
+
+    &-price {
+      margin-right: 12px;
+    }
+  }
+}

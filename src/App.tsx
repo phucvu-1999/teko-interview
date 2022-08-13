@@ -1,80 +1,66 @@
-import React, { useState } from "react";
-import { Badge, Button, Col, Drawer, Row } from "antd";
-import "antd/dist/antd.css";
-import { generateId } from "./helper";
-import { CheckCircleFilled, PlusOutlined } from "@ant-design/icons";
-import TodoItem from "./Components/TodoItem";
+import React from "react";
+import RelatedProduct from "./components/RelatedProduct";
 import "./App.scss";
-import { ToDo } from "./models";
-import AddTodo from "./Components/AddTodo";
+import { Product } from "./models";
+import { generateId } from "./helper";
 
-function App() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [toDos, setTodos] = useState<ToDo[]>([]);
-  const [selectedToDo, setSelectedToDo] = useState<ToDo>();
-
-  const handleOpen = () => {
-    setIsOpen(true);
-  };
-
-  const handleClose = () => {
-    setIsOpen(false);
-    setSelectedToDo(undefined);
-  };
+const App = () => {
+  const mockDatas: Product[] = [
+    {
+      id: generateId(),
+      availableQuantity: 5,
+      discountPercent: 10,
+      image: "./imgs/apple-iphone-11-64gb-6.1.png",
+      name: "Iphone 11 sadasdasfagfajkbgsjkgksdhgjkshdgjkshgjkhsdjghsjkghskjghsjghsjghsljhshdlghsdjkghsjdhgsjdhgsjhgsghshgsh",
+      price: 10000000,
+      discountPrice: 9000000000,
+    },
+    {
+      id: generateId(),
+      availableQuantity: 10,
+      discountPercent: 20,
+      image: "./imgs/apple-iphone-11-64gb-6.1.png",
+      name: "Iphone 12 asjfbakjfkajshfhlaflkadglksgjbb afsiahfjlabfjkabgjabgjabgjb",
+      price: 200000000,
+      discountPrice: 8000000000,
+    },
+  ];
 
   return (
     <div className="app">
-      <div className="to-do-app">
-        <div className="to-do-header">
-          <div className="to-do-label">
-            <Badge count={toDos.length} showZero />
-            <span className="to-do-text">TO DO</span>
+      <div className="main-product">
+        <div className="main-product-img">
+          <img src="./imgs/apple-iphone-11-64gb-6.1.png" alt="Hello" />
+        </div>
+
+        <div className="main-product-details">
+          <div className="main-product-price">
+            <div className="main-product-normal-price">258.000d</div>
+            <div className="main-product-discount">
+              <div className="main-product-discount-price">120.000d</div>
+              <div className="main-product-discount-percent">-10%</div>
+            </div>
           </div>
-          <div className="to-do-add-btn">
-            <Button type="primary" onClick={handleOpen}>
-              <PlusOutlined /> Add
-            </Button>
+
+          <div className="main-product-name">
+            Laptop ASUS VivoBook 14 A412FA-EK734T (14\" FHD/i5-10210U/8GB/512GB
+            SSD/Intel UHD)
+          </div>
+          <div className="main-product-seller">
+            By <a href="#">XiaoMi</a>
           </div>
         </div>
-        <div className="to-do-items">
-          {toDos.map((item) => (
-            <TodoItem
-              key={item.id}
-              toDo={item}
-              setSelectedToDo={setSelectedToDo}
-              toDos={toDos}
-              handleOpen={handleOpen}
-              setToDos={setTodos}
-            />
+      </div>
+      <div className="related-products">
+        <p>San pham lien quan</p>
+        <div className="related-products-container">
+          {mockDatas.map((item) => (
+            <RelatedProduct key={item.id} product={item} />
           ))}
         </div>
       </div>
-      <Drawer
-        footer={
-          <Row gutter={16}>
-            <Col span={12}>
-              <Button type="primary">Cancel</Button>
-            </Col>
-            <Col style={{ textAlign: "right" }} span={12}>
-              <Button htmlType="submit" form="addToDoForm" type="primary">
-                Add
-              </Button>
-            </Col>
-          </Row>
-        }
-        title={selectedToDo ? "Update to do" : "Add to do"}
-        onClose={handleClose}
-        visible={isOpen}
-      >
-        <AddTodo
-          handleClose={handleClose}
-          toDos={toDos}
-          selectedTodo={selectedToDo}
-          setToDos={setTodos}
-        />
-      </Drawer>
     </div>
   );
-}
+};
 
 export default App;

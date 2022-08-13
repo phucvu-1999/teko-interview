@@ -1,53 +1,72 @@
 .app {
   padding: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.to-do {
-  &-app {
-    width: 400px;
-    border: 1px solid #ccc;
-    height: auto;
-    padding: 12px;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
+.main-product {
+  &-img {
+    img {
+      display: block;
+      height: 300px;
+      width: 100%;
+    }
   }
 
-  &-header {
-    display: flex;
-    justify-content: space-between;
+  &-price {
   }
 
-  &-text {
+  &-details {
+    padding: 20px;
+  }
+
+  &-name {
+    margin-top: 12px;
     font-weight: bold;
-    margin-left: 4px;
+  }
+
+  &-seller {
+    a {
+      color: #70baff;
+      text-decoration: none;
+    }
+  }
+
+  &-normal-price {
+    font-size: 32px;
+    color: red;
+    font-weight: 600;
+    text-decoration: line-through;
+  }
+
+  &-discount {
+    display: flex;
+    &-percent {
+      margin-left: 8px;
+      color: #e37272;
+    }
+
+    &-price {
+      color: #ccc;
+    }
   }
 }
 
-.mt-5 {
-  margin-top: 5;
+.related-products {
+  padding: 24px;
+
+  p {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  &-container {
+    display: flex;
+  }
 }
-.mt-10 {
-  margin-top: 10px;
-}
-.mb-5 {
-  margin-bottom: 5px;
-}
-.mb-10 {
-  margin-bottom: 10px;
-}
-.ml-5 {
-  margin-left: 5px;
-}
-.ml-10 {
-  margin-left: 10px;
-}
-.mt-5 {
-  margin-right: 5px;
-}
-.mr-10 {
-  margin-right: 10px;
+
+@media (max-width: 600px) {
+  .app {
+    padding: 0;
+  }
 }

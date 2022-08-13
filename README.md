@@ -19,3 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 I also deploy it with vercel for if you don't wanna run the whole project.
 You can visit it in [Teko Interview](https://tienphuc-teko-interview.vercel.app/)
+
+```bash
+This landing page i just only implement code for the mobile only (requirement) and i can not controll the real time so im very sorry about the web UI. To best User Expericence please turn to mobile view to view it. Thank you for you review.
+```

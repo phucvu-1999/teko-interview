@@ -1,7 +1,9 @@
-import moment from "moment";
-
-export interface ToDo {
+export interface Product {
   id: string;
-  content: string;
-  time: moment.Moment;
+  name: string;
+  image: string;
+  discountPercent: number;
+  availableQuantity: number;
+  price: number;
+  discountPrice: number;
 }
