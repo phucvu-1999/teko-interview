@@ -10,7 +10,7 @@ const App = () => {
       id: generateId(),
       availableQuantity: 5,
       discountPercent: 10,
-      image: "./imgs/apple-iphone-11-64gb-6.1.png",
+      image: "../imgs/apple-iphone-11-64gb-6.1.png",
       name: "Iphone 11 sadasdasfagfajkbgsjkgksdhgjkshdgjkshgjkhsdjghsjkghskjghsjghsjghsljhshdlghsdjkghsjdhgsjdhgsjhgsghshgsh",
       price: 10000000,
       discountPrice: 9000000000,
@@ -19,7 +19,7 @@ const App = () => {
       id: generateId(),
       availableQuantity: 10,
       discountPercent: 20,
-      image: "./imgs/apple-iphone-11-64gb-6.1.png",
+      image: "../imgs/apple-iphone-11-64gb-6.1.png",
       name: "Iphone 12 asjfbakjfkajshfhlaflkadglksgjbb afsiahfjlabfjkabgjabgjabgjb",
       price: 200000000,
       discountPrice: 8000000000,
@@ -30,7 +30,10 @@ const App = () => {
     <div className="app">
       <div className="main-product">
         <div className="main-product-img">
-          <img src="./imgs/apple-iphone-11-64gb-6.1.png" alt="Hello" />
+          <img
+            src={require("./imgs/apple-iphone-11-64gb-6.1.png")}
+            alt="Hello"
+          />
         </div>
 
         <div className="main-product-details">

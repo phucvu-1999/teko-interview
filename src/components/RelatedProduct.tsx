@@ -12,7 +12,10 @@ const RelatedProduct = (props: Props) => {
   return (
     <div className="related-product-container">
       <div className="related-product-img">
-        <img src={product.image} alt={product.id} />
+        <img
+          src={require("../imgs/apple-iphone-11-64gb-6.1.png")}
+          alt={product.id}
+        />
       </div>
       <div className="related-product-details">
         <div className="related-product-name">{product.name}</div>
