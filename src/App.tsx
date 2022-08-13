@@ -7,6 +7,7 @@ import { generateId } from "./helper";
 const App = () => {
   const mockDatas: Product[] = [
     {
+      // I use this genrateId for the id because it will avoid React anti pattern
       id: generateId(),
       availableQuantity: 5,
       discountPercent: 10,
